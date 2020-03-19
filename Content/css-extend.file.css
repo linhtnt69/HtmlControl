@@ -1,0 +1,319 @@
+﻿.ext-file {
+    float: left;
+    font-family: 'Roboto' !important;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px solid #6c757d;
+    color: #6c757d;
+    padding: 5px;
+    max-width: 246px;
+}
+
+    .ext-file input[type="file"] {
+        display: none;
+    }
+
+    .ext-file .file-box {
+        position: relative;
+        float: left;
+        border: 1px dashed #6c757d;
+        width: 234px;
+        height: 70px;
+        margin: 5px;
+    }
+
+        .ext-file .file-box.frame {
+            cursor: pointer;
+        }
+
+            .ext-file .file-box.frame > span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                white-space: nowrap;
+            }
+
+        .ext-file .file-box .group-icon {
+            float: left;
+            position: relative;
+            border-bottom: 1px dashed #6c757d;
+            padding: 3px 0px;
+            width: 100%;
+        }
+
+            .ext-file .file-box .group-icon span {
+                float: right;
+                cursor: pointer;
+                height: 15px;
+                margin-right: 5px;
+            }
+
+                .ext-file .file-box .group-icon span .fa {
+                    float: left;
+                }
+
+            .ext-file .file-box .group-icon .icon-remove {
+                color: #dc3545;
+            }
+
+            .ext-file .file-box .group-icon .icon-upload {
+                color: #007bff;
+            }
+
+            .ext-file .file-box .group-icon .icon-set-header {
+                float: left;
+                color: #6c757d;
+                margin-left: 5px;
+                margin-right: 0px;
+            }
+
+        .ext-file .file-box .group-view {
+            float: left;
+            position: relative;
+            padding: 5px;
+            height: 60px;
+            width: 60px;
+            border-right: 1px dashed #6c757d;
+            margin-right: -1px;
+        }
+
+            .ext-file .file-box .group-view .view {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                max-height: 60px;
+                max-width: 60px;
+            }
+
+        .ext-file .file-box .group-info {
+            float: left;
+            position: relative;
+            padding: 5px;
+            height: 60px;
+            width: 154px;
+        }
+
+            .ext-file .file-box .group-info .line {
+                float: left;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+            }
+
+                .ext-file .file-box .group-info .line.title {
+                    font-weight: bold;
+                }
+
+        .ext-file .file-box .file-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+        }
+
+            .ext-file .file-box .file-loading .fa.fa-spinner {
+                -animation: file-loading .7s infinite linear;
+                -webkit-animation: w-file-loading .7s infinite linear;
+            }
+
+    .ext-file.horizontal:not(.one-image) {
+        max-width: unset !important;
+    }
+
+    .ext-file.no-info .file-box .group-view {
+        border-right: none;
+        margin-right: 0px;
+    }
+
+    .ext-file.no-info:not(.one-image) .file-box:not(.frame) {
+        width: 70px;
+    }
+
+    .ext-file.one-image.no-info .file-box:not(.frame) {
+        height: 236px;
+        width: 236px;
+        border: none;
+    }
+
+    .ext-file.one-image.no-info .file-box .group-view {
+        height: 236px;
+        width: 236px;
+        padding: 0px;
+    }
+
+        .ext-file.one-image.no-info .file-box .group-view img {
+            max-height: 236px;
+            max-width: 236px;
+        }
+
+    .ext-file.show-icon .file-box {
+        height: 92px;
+    }
+
+    .ext-file.view-in-modal .file-box .group-view {
+        cursor: pointer;
+    }
+
+    .ext-file.modal-view {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1035;
+        background-color: rgba(128, 128, 128, 0.5019607843137255);
+        display: none;
+        max-width: unset;
+        margin: 0;
+        border: 0;
+    }
+
+        .ext-file.modal-view .view-content {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 550px;
+            background-color: #fff;
+            border: 10px solid #fff;
+        }
+
+            .ext-file.modal-view .view-content .view-close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: -22px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+                .ext-file.modal-view .view-content .view-close .fa {
+                    position: absolute;
+                    background-color: #fff;
+                    border: 2px solid #60a9d7;
+                    border-radius: 15px;
+                    padding: 6px 7.5px;
+                }
+
+            .ext-file.modal-view .view-content .view-left {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 450px;
+                margin-left: 14px;
+                cursor: pointer;
+                display: none;
+            }
+
+                .ext-file.modal-view .view-content .view-left .fa {
+                    position: absolute;
+                    top: 50%;
+                    -ms-transform: translate(-50%, 0%);
+                    transform: translate(-50%, 0%);
+                    background-color: #fff;
+                    border: 2px solid #60a9d7;
+                    border-radius: 15px;
+                    padding: 6px 7px;
+                }
+
+            .ext-file.modal-view .view-content .view-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 450px;
+                cursor: pointer;
+                display: none;
+            }
+
+                .ext-file.modal-view .view-content .view-right .fa {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    -ms-transform: translate(-50%, 0%);
+                    transform: translate(-50%, 0%);
+                    background-color: #fff;
+                    border: 2px solid #60a9d7;
+                    border-radius: 15px;
+                    padding: 6px 7px;
+                    margin-right: -15px;
+                }
+
+            .ext-file.modal-view .view-content .view-image {
+                position: relative;
+                height: 450px;
+                width: 450px;
+            }
+
+                .ext-file.modal-view .view-content .view-image .view {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    max-height: 450px;
+                    max-width: 450px;
+                }
+
+            .ext-file.modal-view .view-content .view-info {
+                float: left;
+                background-color: #fff;
+                border-top: 1px dashed #6c757d;
+                padding-top: 10px;
+                width: 450px;
+            }
+
+                .ext-file.modal-view .view-content .view-info .line {
+                    float: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                }
+
+                    .ext-file.modal-view .view-content .view-info .line.title {
+                        font-weight: bold;
+                    }
+
+            .ext-file.modal-view .view-content:hover .view-left:not(.no-prev),
+            .ext-file.modal-view .view-content:hover .view-right:not(.no-next) {
+                display: block;
+            }
+
+        .ext-file.modal-view.no-info .view-content {
+            height: 450px;
+        }
+
+    .ext-file .file-box.viewing {
+        border-color: blue;
+        border-width: 2px;
+        margin: 4px;
+    }
+
+@keyframes file-loading {
+    from {
+        transform: scale(1) rotate(0deg);
+    }
+
+    to {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes w-file-loading {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Pages_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="/Content/font-awesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="/Content/css-extend.css" rel="stylesheet" />
+    <link href="/Content/css-extend.layout.css" rel="stylesheet" />
+    <link href="/Content/css-extend.background.css" rel="stylesheet" />
+    <link href="/Content/css-extend.button.css" rel="stylesheet" />
+    <link href="/Content/css-extend.text.css" rel="stylesheet" />
+    <link href="/Content/css-extend.width.css" rel="stylesheet" />
+    <link href="/Content/css-extend.width.percent.css" rel="stylesheet" />
+
+    <script src="/Scripts/jquery.js"></script>
+    <script src="/Scripts/js-extend.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page-menu">
+            <span class="page-icon"></span>
+            <a href="/Pages/ExtAutoComplete.aspx">Auto complete</a>
+            <a href="/Pages/ExtFile.aspx">File</a>
+            <a href="/Pages/ExtTable.aspx">Table</a>
+            <a href="/Pages/ExtTreeView.aspx">Tree view</a>
+            <a href="javascript:void(0);" class="btn-print pull-right">Print</a>
+        </div>
+        <div class="page-content print-content">
+            <asp:ContentPlaceHolder ID="cphBodyContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <script>
+
+        $('.page-menu a').each(function () {
+            if ($(this).prop('href') == location.href)
+                $(this).addClass('active');
+        });
+
+        $('.btn-print').click(function () {
+            var $iframe = $('<iframe></iframe>').appendTo(document.body);
+            $iframe.addClass('previewer');
+            $iframe.css({
+                position: 'fixed',
+                top: '0',
+                left: '0',
+                right: '0',
+                bottom: '0',
+                'background-color': '#fff',
+                border: 'none',
+                width: '100%',
+                height: '100%'
+            });
+            $iframe.prop('src', '/PrintPreview/Default.aspx');
+        });
+
+    </script>
+</body>
+</html>

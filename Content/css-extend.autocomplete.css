@@ -1,0 +1,30 @@
+﻿.ext-autocomplete {
+    float: left;
+	background-color: #fff;
+    border: 1px solid #6c757d;
+    cursor: pointer;
+	font-family: 'Tahoma', 'Geneva', 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 13px;
+    margin: 10px;
+    min-width: 100px;
+}
+
+    .ext-autocomplete input {
+        border: none;
+        padding: 8px;
+		outline: none;
+        width: calc(100% - 40px);
+    }
+
+    .ext-autocomplete .icon {
+        font: normal normal normal 14px/1 FontAwesome;
+        margin-right: 5px;
+    }
+
+        .ext-autocomplete .icon:before {
+            content: "\f078";
+        }
+
+    .ext-autocomplete.active .icon:before {
+        content: "\f077";
+    }

@@ -1,0 +1,169 @@
+﻿.print {
+    position: fixed;
+    box-shadow: 0px 0px 10px 10px var(--color-grey-opacity-0-5);
+    -moz-box-shadow: 0px 0px 10px 10px var(--color-grey-opacity-0-5);
+    -webkit-box-shadow: 0px 0px 10px 2px var(--color-grey-opacity-0-5);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-grey);
+    font-family: 'Tahoma', 'Geneva', 'Arial', 'Helvetica', 'sans-serif';
+    font-size: 13px;
+    margin: 15px;
+    width: calc(100% - 32px);
+    height: calc(100% - 32px);
+}
+
+    .print .setting {
+        float: left;
+        border-right: 1px solid var(--color-grey);
+        width: calc(20% - 1px);
+        height: 100%;
+        overflow: auto;
+    }
+
+        .print .setting .head {
+            float: left;
+            color: var(--color-grey-opacity-0-9);
+            font-size: 15px;
+            width: calc(100% - 30px);
+            height: 50px;
+            line-height: 50px;
+            padding: 0 15px;
+        }
+
+        .print .setting .foot {
+            float: left;
+            width: calc(100% - 30px);
+            padding: 15px;
+        }
+
+        .print .setting .body {
+            float: left;
+            border-top: 1px solid var(--color-grey-opacity-0-1);
+            border-bottom: 1px solid var(--color-grey-opacity-0-1);
+            padding: 15px;
+            width: calc(100% - 30px);
+            height: calc(100% - 148px);
+            overflow: auto;
+        }
+
+            .print .setting .body .line {
+                float: left;
+                padding-bottom: 15px;
+                width: 100%;
+            }
+
+                .print .setting .body .line:last-child {
+                    padding-bottom: 0;
+                }
+
+                .print .setting .body .line input:focus,
+                .print .setting .body .line input:hover,
+                .print .setting .body .dropdown:hover > .item,
+                .print .setting .body .dropdown.open > .item {
+                    border-color: var(--color-blue);
+                }
+
+                .print .setting .body .line .title {
+                    float: left;
+                    color: var(--color-grey-opacity-0-9);
+                    padding-bottom: 8px;
+                    width: 100%;
+                }
+
+    .print .preview {
+        float: left;
+        margin-top: 0.2px;
+        width: calc(80% - 0.1px);
+        height: calc(100% - 0.4px);
+        overflow: auto;
+    }
+
+        .print .preview .border {
+            float: left;
+            background-color: var(--color-grey);
+            padding: 3px;
+        }
+
+        .print .preview .border-top {
+            position: fixed;
+            background-color: var(--color-grey);
+            height: 3px;
+        }
+
+        .print .preview .border-left {
+            position: fixed;
+            background-color: var(--color-grey);
+            width: 3px;
+        }
+
+        .print .preview .border-right {
+            position: fixed;
+            background-color: var(--color-grey);
+            width: 3px;
+        }
+
+        .print .preview .border-bottom {
+            position: fixed;
+            background-color: var(--color-grey);
+            height: 3px;
+        }
+
+        .print .preview .content {
+            float: left;
+            background-color: var(--color-white);
+        }
+
+            .print .preview .content[data-size="A3"] {
+                width: 29.7cm;
+                height: 42cm;
+            }
+
+                .print .preview .content[data-size="A3"][data-layout="landscape"] {
+                    width: 42cm;
+                    height: 29.7cm;
+                    /*width: 1392px;
+                    height: 803.6px;
+                    width: 1248px;
+                    height: 718.6px;*/
+                }
+
+            .print .preview .content[data-size="A4"] {
+                width: 21cm;
+                height: 29.7cm;
+            }
+
+                .print .preview .content[data-size="A4"][data-layout="landscape"] {
+                    width: 29.7cm;
+                    height: 21cm;
+                }
+
+            .print .preview .content[data-size="A5"] {
+                width: 14.8cm;
+                height: 21cm;
+            }
+
+                .print .preview .content[data-size="A5"][data-layout="landscape"] {
+                    width: 21cm;
+                    height: 14.8cm;
+                }
+
+            .print .preview .content .head,
+            .print .preview .content .foot {
+                height: 15mm;
+                line-height: 15mm;
+                padding: 0 5mm;
+                width: calc(100% - 10mm);
+            }
+
+            .print .preview .content .body {
+                border-top: 0.3mm solid var(--color-grey-opacity-0-1);
+                border-bottom: 0.3mm solid var(--color-grey-opacity-0-1);
+                height: calc(100% - 40.3mm);
+                padding: 5mm;
+            }
+
+                .print .preview .content .body .data {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                }

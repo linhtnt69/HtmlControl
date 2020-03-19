@@ -1,0 +1,76 @@
+﻿.checkbox {
+    float: left;
+    margin-top: -8px;
+    width: 100%;
+}
+
+    .checkbox .item {
+        position: relative;
+        float: left;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-right: 20px;
+        padding: 2px 0;
+        padding-left: 25px;
+        user-select: none;
+    }
+
+        .checkbox .item:before {
+            position: absolute;
+            left: 0px;
+            content: '';
+            border: 2px solid var(--color-grey-opacity-0-5);
+            border-radius: 20%;
+            margin-top: -2px;
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox .item.active:before {
+            background-color: var(--color-blue);
+            border-color: var(--color-blue);
+            border-width: 0;
+            width: 20px;
+            height: 20px;
+        }
+
+        .checkbox .item.active:after {
+            position: absolute;
+            left: 7px;
+            content: '';
+            border: 2px solid var(--color-white);
+            border-width: 0 2px 2px 0;
+            vertical-align: middle;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            padding: 2px;
+            padding-left: 3px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .checkbox .item input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px dashed var(--color-grey-opacity-0-5);
+            border-radius: 0;
+            height: unset;
+            line-height: unset;
+            padding: 0px;
+            padding-bottom: 2px;
+            width: 100px;
+        }
+
+    .checkbox.circle .item:before {
+        border-radius: 50%;
+    }
+
+    .checkbox.circle .item.active:after {
+        top: 5px;
+        left: 5px;
+        border-radius: 50%;
+        border-width: 5px;
+        padding: 0;
+        transform: none;
+        -webkit-transform: none;
+    }

@@ -1,0 +1,353 @@
+﻿.ext-menubox {
+    position: relative;
+    float: left;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 95%;
+    width: calc(100% - 350px);
+    height: 100%;
+    overflow: auto;
+    padding: 5px;
+}
+
+    .ext-menubox a {
+        text-decoration: none;
+    }
+
+    .ext-menubox .menu-group {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+        .ext-menubox .menu-group .group-title {
+            float: left;
+            width: calc(100% - 5px);
+            height: 30px;
+            line-height: 30px;
+            padding-left: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .ext-menubox .menu-group .group-box {
+            position: relative;
+            float: left;
+            width: calc(100% - 5px);
+            padding-bottom: 5px;
+        }
+
+            .ext-menubox .menu-group .group-box .box {
+                position: relative;
+                float: left;
+                width: calc(16.66666666666667% - 5px);
+                margin-top: 5px;
+                margin-left: 5px;
+                padding-top: calc(16.66666666666667% - 5px);
+            }
+
+                .ext-menubox .menu-group .group-box .box.box-two {
+                    width: calc(33.33333333333333% - 5px);
+                }
+
+                .ext-menubox .menu-group .group-box .box.box-three {
+                    width: calc(50% - 5px);
+                }
+
+                .ext-menubox .menu-group .group-box .box .box-content {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #407ed2;
+                    border: 2px solid #407ed2;
+                    color: #fff;
+                    cursor: pointer;
+                    padding: 8px;
+                }
+
+                    .ext-menubox .menu-group .group-box .box .box-content .box-title {
+                        width: 100%;
+                        height: 18px;
+                        margin-bottom: 5px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .ext-menubox .menu-group .group-box .box .box-content .box-icon {
+                        width: 100%;
+                        height: 50%;
+                        margin-bottom: 5px;
+                    }
+
+                        .ext-menubox .menu-group .group-box .box .box-content .box-icon * {
+                            width: 50%;
+                            height: 100%;
+                        }
+
+                        .ext-menubox .menu-group .group-box .box .box-content .box-icon.icon-center * {
+                            margin-left: 25%;
+                        }
+
+                    .ext-menubox .menu-group .group-box .box .box-content .box-info {
+                        font-size: 90%;
+                        width: 100%;
+                        height: calc(50% - 28px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .ext-menubox .menu-group .group-box .box .box-content .box-action {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: none;
+                        background-color: rgba(0, 188, 212, 0.7);
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                        .ext-menubox .menu-group .group-box .box .box-content .box-action .action-content {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                        }
+
+                            .ext-menubox .menu-group .group-box .box .box-content .box-action .action-content .btn {
+                                border: 2px solid #007bff;
+                                border-radius: 0;
+                                font-size: 95%;
+                                width: 100%;
+                                margin-bottom: 5px;
+                                text-align: center;
+                            }
+
+                                .ext-menubox .menu-group .group-box .box .box-content .box-action .action-content .btn:hover {
+                                    border-color: #fff;
+                                }
+
+                                .ext-menubox .menu-group .group-box .box .box-content .box-action .action-content .btn:last-child {
+                                    margin-bottom: 0;
+                                }
+
+                    .ext-menubox .menu-group .group-box .box .box-content:hover {
+                        border-color: #00bcd4 !important;
+                    }
+
+                        .ext-menubox .menu-group .group-box .box .box-content:hover .box-action {
+                            display: initial;
+                        }
+
+                .ext-menubox .menu-group .group-box .box.only-title .box-content .box-title {
+                    white-space: normal;
+                }
+
+                .ext-menubox .menu-group .group-box .box.only-title .box-content .box-title,
+                .ext-menubox .menu-group .group-box .box.only-icon .box-content .box-icon,
+                .ext-menubox .menu-group .group-box .box.only-info .box-content .box-info {
+                    height: 100%;
+                    margin-bottom: 0;
+                }
+
+                    .ext-menubox .menu-group .group-box .box.only-icon .box-content .box-icon * {
+                        width: 100%;
+                    }
+
+                .ext-menubox .menu-group .group-box .box.no-title .box-content .box-icon {
+                    height: calc(50% + 30px);
+                }
+
+                    .ext-menubox .menu-group .group-box .box.no-title .box-content .box-icon * {
+                        width: calc(50% + 30px);
+                    }
+
+                    .ext-menubox .menu-group .group-box .box.no-title .box-content .box-icon.icon-center * {
+                        margin-left: calc(50% - calc(50% + 30px)/2);
+                    }
+
+                .ext-menubox .menu-group .group-box .box.no-title .box-content .box-info {
+                    height: 50%;
+                }
+
+                .ext-menubox .menu-group .group-box .box.no-icon .box-content .box-info,
+                .ext-menubox .menu-group .group-box .box.no-info .box-content .box-icon {
+                    height: calc(100% - 25px);
+                    margin-bottom: 0;
+                }
+
+                    .ext-menubox .menu-group .group-box .box.no-info .box-content .box-icon * {
+                        width: calc(100% - 25px);
+                    }
+
+                    .ext-menubox .menu-group .group-box .box.no-info .box-content .box-icon.icon-center * {
+                        margin-left: calc(50% - calc(100% - 25px)/2);
+                    }
+
+    .ext-menubox.two-inline .menu-group {
+        clear: left;
+        width: 50%;
+    }
+
+        .ext-menubox.two-inline .menu-group:nth-child(2n) {
+            clear: none;
+        }
+
+        .ext-menubox.two-inline .menu-group .group-box .box {
+            padding-top: calc(33.33333333333333% - 5px);
+            width: calc(33.33333333333333% - 5px);
+        }
+
+            .ext-menubox.two-inline .menu-group .group-box .box.box-two {
+                width: calc(66.66666666666667% - 5px);
+            }
+
+            .ext-menubox.two-inline .menu-group .group-box .box.box-three {
+                width: calc(100% - 5px);
+            }
+
+    .ext-menubox.most-used {
+        width: 350px;
+    }
+
+        .ext-menubox.most-used .menu-group .group-box .box {
+            padding-top: 0 !important;
+            width: calc(100% - 5px) !important;
+        }
+
+            .ext-menubox.most-used .menu-group .group-box .box .box-content {
+                position: relative;
+                float: left;
+                background-color: transparent;
+                border-color: transparent;
+                color: #333333;
+                min-height: 58px;
+                width: 100%;
+                padding: 0;
+                padding-left: 60px;
+            }
+
+                .ext-menubox.most-used .menu-group .group-box .box .box-content .box-title {
+                    height: 54px;
+                    line-height: 58px;
+                    margin-bottom: 0;
+                }
+
+                .ext-menubox.most-used .menu-group .group-box .box .box-content .box-icon {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #407ed2;
+                    width: 54px;
+                    height: 54px;
+                    margin-bottom: 0;
+                    padding: 5px;
+                }
+
+                    .ext-menubox.most-used .menu-group .group-box .box .box-content .box-icon * {
+                        width: 100%;
+                        margin: 0 !important;
+                    }
+
+                .ext-menubox.most-used .menu-group .group-box .box .box-content .box-info {
+                    display: none;
+                }
+
+@media screen and (min-width: 961px) and (max-width: 1280px) {
+    .ext-menubox .menu-group .group-box .box {
+        padding-top: calc(25% - 5px);
+        width: calc(25% - 5px);
+    }
+
+        .ext-menubox .menu-group .group-box .box.box-two {
+            width: calc(50% - 5px);
+        }
+
+        .ext-menubox .menu-group .group-box .box.box-three {
+            width: calc(75% - 5px);
+        }
+
+    .ext-menubox.two-inline .menu-group .group-box .box {
+        padding-top: calc(50% - 5px);
+        width: calc(50% - 5px);
+    }
+
+        .ext-menubox.two-inline .menu-group .group-box .box.box-two,
+        .ext-menubox.two-inline .menu-group .group-box .box.box-three {
+            width: calc(100% - 5px);
+        }
+}
+
+@media screen and (max-width: 960px) {
+    .ext-menubox .menu-group .group-box .box {
+        padding-top: calc(33.33333333333333% - 5px);
+        width: calc(33.33333333333333% - 5px);
+    }
+
+        .ext-menubox .menu-group .group-box .box.box-two {
+            width: calc(66.66666666666667% - 5px);
+        }
+
+        .ext-menubox .menu-group .group-box .box.box-three {
+            width: calc(100% - 5px);
+        }
+
+    .ext-menubox.two-inline .menu-group {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 810px) {
+    .ext-menubox.two-inline .menu-group .group-box .box {
+        padding-top: calc(50% - 5px);
+        width: calc(50% - 5px);
+    }
+
+        .ext-menubox.two-inline .menu-group .group-box .box.box-two,
+        .ext-menubox.two-inline .menu-group .group-box .box.box-three {
+            width: calc(100% - 5px);
+        }
+}
+
+@media screen and (max-width: 680px) {
+    .ext-menubox {
+        width: 100% !important;
+        height: unset;
+    }
+
+        .ext-menubox.most-used .menu-group .group-box .box {
+            width: calc(50% - 5px) !important;
+        }
+}
+
+@media screen and (max-width: 480px) {
+    .ext-menubox .menu-group .group-box .box,
+    .ext-menubox.two-inline .menu-group .group-box .box {
+        padding-top: calc(50% - 5px);
+        width: calc(50% - 5px);
+    }
+
+        .ext-menubox .menu-group .group-box .box.box-two,
+        .ext-menubox .menu-group .group-box .box.box-three,
+        .ext-menubox.two-inline .menu-group .group-box .box.box-two,
+        .ext-menubox.two-inline .menu-group .group-box .box.box-three {
+            width: calc(100% - 5px);
+        }
+
+    .ext-menubox.most-used .menu-group .group-box .box {
+        width: calc(100% - 5px) !important;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .ext-menubox .menu-group .group-box .box,
+    .ext-menubox.two-inline .menu-group .group-box .box {
+        padding-top: calc(100% - 5px);
+        width: calc(100% - 5px);
+    }
+}

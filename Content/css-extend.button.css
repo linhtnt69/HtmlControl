@@ -1,0 +1,35 @@
+﻿.btn {
+    cursor: pointer;
+}
+
+.btn-aqua {
+    color: #17a2b8 !important;
+}
+
+.btn-blue {
+    color: #007bff !important;
+}
+
+.btn-dark {
+    color: #343a40 !important;
+}
+
+.btn-green {
+    color: #28a745 !important;
+}
+
+.btn-grey {
+    color: #6c757d !important;
+}
+
+.btn-orange {
+    color: #ffc107 !important;
+}
+
+.btn-red {
+    color: #dc3545 !important;
+}
+
+.btn-white {
+    color: #fff !important;
+}

@@ -1,0 +1,43 @@
+﻿.txt-left {
+    text-align: left !important;
+}
+
+.txt-center {
+    text-align: center !important;
+}
+
+.txt-right {
+    text-align: right !important;
+}
+
+.txt-aqua {
+    color: #17a2b8 !important;
+}
+
+.txt-blue {
+    color: #007bff !important;
+}
+
+.txt-dark {
+    color: #343a40 !important;
+}
+
+.txt-green {
+    color: #28a745 !important;
+}
+
+.txt-grey {
+    color: #6c757d !important;
+}
+
+.txt-orange {
+    color: #ffc107 !important;
+}
+
+.txt-red {
+    color: #dc3545 !important;
+}
+
+.txt-white {
+    color: #fff !important;
+}

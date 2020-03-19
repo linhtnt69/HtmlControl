@@ -1,0 +1,356 @@
+﻿.ext-table {
+    position: relative;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #d2d6de;
+    color: #444;
+    margin: 10px;
+    width: calc(100% - 22px);
+}
+
+    .ext-table .content-head,
+    .ext-table .content-body {
+        position: relative;
+        float: left;
+        background-color: #fff;
+        width: 100%;
+        overflow: hidden;
+    }
+
+        .ext-table .content-head.head-right,
+        .ext-table .content-body.body-right {
+            border-left: 1px solid #d2d6de;
+        }
+
+        .ext-table .content-head .head-row,
+        .ext-table .content-body .body-row {
+            position: relative;
+            float: left;
+            border-bottom: 1px solid #d2d6de;
+            width: 100%;
+        }
+
+        .ext-table .content-head .head-row {
+            border-bottom: 2px solid #d2d6de;
+            font-weight: bold;
+        }
+
+        .ext-table .content-body .body-row:last-child {
+            border-bottom: none;
+        }
+
+        .ext-table .content-body .body-row.hover {
+            background-color: rgba(108, 117, 125, 0.2);
+        }
+
+        .ext-table .content-head .head-row .head-col,
+        .ext-table .content-body .body-row .body-col {
+            position: relative;
+            float: left;
+            border-right: 1px solid #d2d6de;
+        }
+
+        .ext-table .content-head:not(.head-left) .head-row .head-col:last-child,
+        .ext-table .content-body:not(.body-left) .body-row .body-col:last-child {
+            border-right: none;
+        }
+
+        .ext-table .content-head .head-row .head-col .head-col-content,
+        .ext-table .content-body .body-row .body-col .body-col-content {
+            float: left;
+            line-height: 1.5;
+            padding: 8px;
+            width: calc(100% - 16px);
+            word-wrap: break-word;
+        }
+
+            .ext-table .content-body .body-row .body-col .body-col-content.vertical {
+                position: absolute;
+                top: 50%;
+                -ms-transform: translate(0%, -50%);
+                transform: translate(0%, -50%);
+            }
+
+        .ext-table .content-body .body-row .body-col .body-col-template {
+            float: left;
+            background-color: #d2d6de;
+            border: none;
+            color: #fff;
+            font-family: 'Tahoma', 'Geneva', 'Arial', 'Helvetica', 'sans-serif' !important;
+            font-size: 13px !important;
+            width: calc(100% - 16px);
+            height: calc(100% - 16px);
+            line-height: 1.5;
+            margin: 0px;
+            padding: 8px;
+            outline: none;
+            overflow: hidden;
+            resize: none;
+        }
+
+            .ext-table .content-body .body-row .body-col .body-col-template::selection {
+                background-color: #007bff;
+            }
+
+    .ext-table .content-foot {
+        float: left;
+        background-color: #fff;
+        border-top: 1px solid #d2d6de;
+        width: 100%;
+        height: 47px;
+        overflow: hidden;
+    }
+
+        .ext-table .content-foot .info {
+            float: left;
+            height: 47px;
+            line-height: 47px;
+            padding: 0 15px;
+        }
+
+        .ext-table .content-foot .paging {
+            float: right;
+            padding: 10px 15px;
+        }
+
+            .ext-table .content-foot .paging .size-label {
+                float: left;
+                height: 27px;
+                line-height: 27px;
+            }
+
+            .ext-table .content-foot .paging .size-click {
+                float: left;
+                border: 1px solid #d2d6de;
+                cursor: pointer;
+                margin-left: 5px;
+                min-width: 35px;
+                padding: 0 5px;
+            }
+
+                .ext-table .content-foot .paging .size-click .text {
+                    height: 25px;
+                    line-height: 25px;
+                    padding-top: 1px;
+                }
+
+                .ext-table .content-foot .paging .size-click .icon {
+                    font: normal normal normal 14px/1 FontAwesome;
+                    height: 25px;
+                    line-height: 25px;
+                    margin-left: 5px;
+                }
+
+                    .ext-table .content-foot .paging .size-click .icon:before {
+                        content: "\f078";
+                    }
+
+                .ext-table .content-foot .paging .size-click.active .icon:before {
+                    content: "\f077";
+                }
+
+            .ext-table .content-foot .paging .index-group {
+                float: left;
+                border: 1px solid #d2d6de;
+                border-right: none;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+
+                .ext-table .content-foot .paging .index-group .goto {
+                    float: left;
+                    border: none;
+                    border-right: 1px solid #d2d6de;
+                    width: 50px;
+                    height: 25px;
+                    line-height: 25px;
+                    outline: none;
+                    padding: 0;
+                    text-align: center;
+                }
+
+                .ext-table .content-foot .paging .index-group .icon {
+                    float: left;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    border-right: 1px solid #d2d6de;
+                    height: 25px;
+                    line-height: 25px;
+                    min-width: 25px;
+                    padding-top: 1px;
+                    text-align: center;
+                }
+
+                    .ext-table .content-foot .paging .index-group .icon:hover {
+                        background-color: #f1f1f1;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.first:before {
+                        content: "\f053";
+                        margin-left: -1px;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.first:after {
+                        content: "\f053";
+                        margin-left: -3px;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.prev:before {
+                        content: "\f053";
+                        margin-left: -1px;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.next:before {
+                        content: "\f054";
+                        margin-right: -1px;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.last:before {
+                        content: "\f054";
+                        margin-right: -3px;
+                    }
+
+                    .ext-table .content-foot .paging .index-group .icon.last:after {
+                        content: "\f054";
+                        margin-right: -1px;
+                    }
+
+    .ext-table .modal {
+        position: absolute;
+        display: none;
+        background-color: rgba(195, 195, 195, 0.7);
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+        .ext-table .modal .loading {
+            position: absolute;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            vertical-align: text-bottom;
+            border: 3px solid currentColor;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: loading .75s linear infinite;
+            animation: loading .75s linear infinite;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+        }
+
+    .ext-table .scroll-bottom {
+        position: absolute;
+        background-color: #fff;
+        border-top: 1px solid #d2d6de;
+        width: 100%;
+        overflow: hidden;
+        left: 0;
+        bottom: 48px;
+    }
+
+        .ext-table .scroll-bottom .left-scroll {
+            float: left;
+            border-right: 1px solid #d2d6de;
+        }
+
+        .ext-table .scroll-bottom .content-scroll {
+            float: left;
+            background-color: #f2f2f2;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+            .ext-table .scroll-bottom .content-scroll .scroll-row {
+                height: 1px;
+            }
+
+        .ext-table .scroll-bottom .right-scroll {
+            float: left;
+            border-left: 1px solid #d2d6de;
+        }
+
+    .ext-table .scroll-right {
+        position: absolute;
+        background-color: #fff;
+        border-left: 1px solid #d2d6de;
+        height: 100%;
+        overflow: hidden;
+        top: 0;
+        right: 0;
+    }
+
+        .ext-table .scroll-right .head-scroll {
+            border-bottom: 2px solid #d2d6de;
+        }
+
+        .ext-table .scroll-right .content-scroll {
+            background-color: #f2f2f2;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+            .ext-table .scroll-right .content-scroll .scroll-row {
+                width: 1px;
+            }
+
+    .ext-table .head-col[data-sort-name] {
+        position: relative;
+        user-select: none;
+        word-wrap: break-word;
+    }
+
+        .ext-table .head-col[data-sort-name]:hover {
+            cursor: pointer;
+        }
+
+        .ext-table .head-col[data-sort-name]:after {
+            position: absolute;
+            font: normal normal normal 14px/1 FontAwesome;
+            opacity: 0.5;
+            content: "\f0ec";
+            transform: rotate(90deg);
+            display: block;
+            top: 10px;
+            right: 6px;
+        }
+
+        .ext-table .head-col[data-sort-name][data-sort-type=asc]:after {
+            content: "\f161";
+            transform: rotate(0deg);
+        }
+
+        .ext-table .head-col[data-sort-name][data-sort-type=desc]:after {
+            content: "\f160";
+            transform: rotate(0deg);
+        }
+
+        .ext-table .head-col[data-sort-name]:hover:after,
+        .ext-table .head-col[data-sort-name][data-sort-type=asc]:after,
+        .ext-table .head-col[data-sort-name][data-sort-type=desc]:after {
+            opacity: 1;
+        }
+
+        .ext-table .head-col[data-sort-name] .head-col-content {
+            width: calc(100% - 32px) !important;
+        }
+
+    .ext-table.no-body .head-row:last-child {
+        border-bottom: none;
+    }
+
+    .ext-table.no-foot .content-foot {
+        display: none;
+        height: 0;
+    }
+
+    .ext-table.no-foot .scroll-bottom {
+        bottom: 0;
+    }
+
+@keyframes loading {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
